@@ -27,6 +27,7 @@ Run following commands in the project root directory:
 docker-compose build
 cd php/laravel
 composer install
+cp .env.example .env
 php artisan key:generate
 docker-compose up
 ```
@@ -52,6 +53,7 @@ Run following commands in the project root directory:
 ```
 cd php/laravel
 composer install
+cp .env.example .env
 php artisan key:generate
 ```
 Then, you can access ImageShowcase on `localhost/ImageShowcase` (URL depends on your Apache setting).
