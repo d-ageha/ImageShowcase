@@ -3,9 +3,9 @@
         @foreach ($breadcrumbs as $breadcrumb)
 
             @if (!is_null($breadcrumb->url) && !$loop->last)
-                <li class="breadcrumb-item pure-u"><a href="{{ $breadcrumb->url }}">{{ $breadcrumb->title }}</a></li>
+                <li class="is-breadcrumb-item pure-u"><a href="{{ $breadcrumb->url }}">{{ $breadcrumb->title }}</a></li>
             @else
-                <li class="breadcrumb-item active pure-u">{{ $breadcrumb->title }}</li>
+                <li class="is-breadcrumb-item active pure-u">{{ $breadcrumb->title }}</li>
             @endif
             @if(!$loop->last)
                 <div>></div> 
