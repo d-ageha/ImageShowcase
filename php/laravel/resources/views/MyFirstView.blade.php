@@ -1,10 +1,9 @@
 @extends('common')
 
 @section('breadcrumbs')
-{{Breadcrumbs::render('test')}}    
+{{Breadcrumbs::render('test')}}
 @endsection
 
 @section('main')
-This is main    
+This is main
 @endsection
-

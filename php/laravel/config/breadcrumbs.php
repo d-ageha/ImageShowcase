@@ -24,7 +24,7 @@ return [
     */
 
     //'view' => 'breadcrumbs::bootstrap5',
-    'view' => 'parts.common.breadcrumbs',
+    'view' => 'theme.default.common.breadcrumbs',
 
     /*
     |--------------------------------------------------------------------------

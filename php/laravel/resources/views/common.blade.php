@@ -13,17 +13,17 @@
     <!-- Styles -->
     <!-- ImageShowcase depends on pure.css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
-    integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
     <link href="{{ asset('css/layout.css') }}" rel="stylesheet">
 </head>
 
 <body class="antialiased">
-    @include("parts/common/header")
+    @include("theme/default/common/header")
     @yield('breadcrumbs')
     <main>
         @yield('main')
     </main>
-    @include("parts/common/footer")
+    @include("theme/default/common/footer")
 </body>
 
 </html>
