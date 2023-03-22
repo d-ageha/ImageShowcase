@@ -20,8 +20,7 @@ Then, run following commands in the project root directory:
 docker-compose build
 docker-compose up -d
 
-cd php/laravel
-composer install
+docker exec -w /var/www/html/laravel ImageShowcase composer install
 docker exec -w /var/www/html/laravel ImageShowcase php artisan key:generate
 docker exec -w /var/www/html/laravel ImageShowcase php artisan migrate
 ```
