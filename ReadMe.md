@@ -51,7 +51,6 @@ Then, run following commands in the project root directory:
 ```
 cd php/laravel
 composer install
-cp .env.example .env
 php artisan key:generate
 php artisan migrate
 ```
