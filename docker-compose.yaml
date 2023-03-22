@@ -24,6 +24,8 @@ services:
       MYSQL_DATABASE: imageshowcase
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./db/:/var/lib/mysql/
     ports:
       - "9906:3306"
 

@@ -2,7 +2,6 @@
 
 A laravel based project to showcase your images.
 
-
 ## Install with Docker
 
 ### Prerequisites
@@ -35,7 +34,7 @@ You can access ImageShowcase on `localhost:8000`.
 
 * PHP 7 >
 * Apache ?
-* MySQL ?
+* MySQL 8>
 * Composer 9 >
 
 ### Instraction
