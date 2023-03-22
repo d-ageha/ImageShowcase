@@ -1,38 +1,32 @@
 # ImageShowcase
+
 A laravel based project to showcase your images.
 
-
-## Environmental variables
-
-Set following variables in .env:
-* MYSQL_ROOT_PASSWORD
-* MYSQL_USER
-* MYSQL_PASSWORD
-
-----
 
 ## Install with Docker
 
 ### Prerequisites
 
-* PHP 7 >
-* Composer 9 >
-* Docker (optional)
+* Docker
 
 ### Instraction
 
-Run following commands in the project root directory:
+First, rename `.env.example` in the project root directory and `php/laravel` to `.env`, 
+then edit the contents according to your liking.
+
+Then, run following commands in the project root directory:
 
 ```
 docker-compose build
+docker-compose up -d
+
 cd php/laravel
 composer install
-cp .env.example .env
-php artisan key:generate
-docker-compose up
+docker exec -w /var/www/html/laravel ImageShowcase php artisan key:generate
+docker exec -w /var/www/html/laravel ImageShowcase php artisan migrate
 ```
 
-Then, you can access ImageShowcase on `localhost:8000`.
+You can access ImageShowcase on `localhost:8000`.
 
 ----
 
@@ -49,11 +43,24 @@ Then, you can access ImageShowcase on `localhost:8000`.
 
 Clone this repository into Apache document root directory (/var/www/html for Linux).
 
-Run following commands in the project root directory:
+Rename `.env.example` in the project root directory and `php/laravel` to `.env`,
+then edit the content according to your liking.
+
+Then, run following commands in the project root directory:
+
 ```
 cd php/laravel
 composer install
 cp .env.example .env
 php artisan key:generate
+php artisan migrate
 ```
-Then, you can access ImageShowcase on `localhost/ImageShowcase` (URL depends on your Apache setting).
+
+You can access ImageShowcase on `localhost/ImageShowcase` (URL depends on your Apache setting).
+
+## About Migration
+
+I would rewrite migraton files during development (at least before the first stable release).
+
+I think this affects nobody, but if you are already running an older version of ImageShowcase and want to 
+update to a newer version, then you might run into trouble.

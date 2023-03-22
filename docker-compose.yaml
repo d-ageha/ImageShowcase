@@ -2,7 +2,8 @@ version: "3.8"
 
 services:
   php-apache-environment:
-    container_name: "ImageShowcase"
+    container_name: ImageShowcase    
+    user: ${USER_ID}:${GROUP_ID}
     build:
       context: ./php
       dockerfile: Dockerfile
@@ -20,7 +21,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ImgShv0
+      MYSQL_DATABASE: imageshowcase
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
