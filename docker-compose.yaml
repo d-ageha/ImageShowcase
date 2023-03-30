@@ -7,6 +7,9 @@ services:
     build:
       context: ./php
       dockerfile: Dockerfile
+      args:
+        - UID=${USER_ID}
+        - GID=${GROUP_ID}
     depends_on:
       - db
 
